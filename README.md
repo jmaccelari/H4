@@ -25,11 +25,14 @@ Alternatively, the application can be run from the source directory without ugli
 it or running the unit tests by loading the bounce-balls-src.html file.
 
 ## Layout
-./bin: the directory where the uglified files are and where the demo may be run from<br>
-./src: the actual source code<br>
+./bin: the directory where the uglified files are and where the demo may be run from.
+
+./src: the actual source code.<br>
   - main.js - the main entry point from the browser<br>
-  - bounce-balls.js - the Ball class and physics models module<br>
+  - bounce-balls.js - the Ball class and physics models module
+
 ./test: the unit test directory. This uses jest.
+  - bounce-balls.test.js - the unit test file
 
 ## Unit tests
 The unit tests are not a comprehensive suite of tests. I have only implemented
