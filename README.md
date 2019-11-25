@@ -12,6 +12,7 @@ This project uses npm and the following scripts are defined:<br>
 - deploy: deploy the app (uglifying it) to the ./bin directory<br>
 - clean: remove the uglified files from the ./bin directory, the node_modules directory and the package-lock.json file.<br>
 - test: run the unit tests in ./test
+- pretty: prettify the code
 
 ## Installing and running
 Make sure npm is installed.<br>
