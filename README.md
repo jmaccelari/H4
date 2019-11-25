@@ -10,7 +10,7 @@ by pressing the 'Change Colour' button.
 
 This project uses npm and the following scripts are defined:<br>
 - deploy: deploy the app (uglifying it) to the ./bin directory<br>
-- clean: remove the uglified files from the ./bin directory<br>
+- clean: remove the uglified files from the ./bin directory, the node_modules directory and the package-lock.json file.<br>
 - test: run the unit tests in ./test
 
 ## Installing and running
@@ -43,7 +43,6 @@ For Firefox:<br>
     Type about:config into the navigation bar, then set security.fileuri.strict_origin_policy = false
 
 For Chrome, use the command line option:<br>
-  > Chrome.exe --disable-web-security  (Windows)<br>
-  > chrome --disable-web-security (Linux)
--->
+- Chrome.exe --disable-web-security  (Windows)<br>
+- chrome --disable-web-security (Linux)
 
