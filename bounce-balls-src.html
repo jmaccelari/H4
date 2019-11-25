@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JavaScript Bouncing Ball</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script type="module" src="bin/bounce-balls.js"></script>
+  </head>
+  <body>
+    <canvas id="bounceBallsCanvas" width="500" height="375">
+    </canvas>
+    <script type="module">
+        import { bounceBalls } from './src/main.js';
+        $(document).ready(function() {
+    	    bounceBalls();
+        });
+    </script>
+    <button id="changeColourButton">Change Colour</button> 
+    <button id="changeModelButton">Change Model</button> 
+  </body>
+</html>

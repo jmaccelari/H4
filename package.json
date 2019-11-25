@@ -1,0 +1,33 @@
+{
+  "name": "bounce-balls",
+  "version": "1.0.0",
+  "description": "Bouncing Balls Project",
+  "main": "main.js",
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "uglify-es": "^3.3.9",
+    "uglify-js": "^3.6.9"
+  },
+  "devDependencies": {
+    "transpile": "^2.7.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(mjs|jsx|js)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(lodash-es)/)"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "deploy": "mkdir -p bin; rm -f bin/*; ./node_modules/uglify-es/bin/uglifyjs --compress --mangle -- src/main.js > bin/main.js ; ./node_modules/uglify-es/bin/uglifyjs --compress --mangle -- src/bounce-balls.js > bin/bounce-balls.js ",
+    "clean": "rm -rf bin node_modules package-lock.json"
+  },
+  "author": "Jeremy Maccelari",
+  "license": "ISC"
+}
