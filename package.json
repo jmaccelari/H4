@@ -28,7 +28,8 @@
         "test": "jest",
         "deploy": "mkdir -p bin; rm -f bin/*; ./node_modules/uglify-es/bin/uglifyjs --compress --mangle -- src/main.js > bin/main.js ; ./node_modules/uglify-es/bin/uglifyjs --compress --mangle -- src/bounce-balls.js > bin/bounce-balls.js ",
         "clean": "rm -rf bin node_modules package-lock.json",
-        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+        "git-hooks": "./scripts/install-hooks.sh"
     },
     "author": "Jeremy Maccelari",
     "license": "ISC"

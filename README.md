@@ -13,6 +13,7 @@ This project uses npm and the following scripts are defined:<br>
 - clean: remove the uglified files from the ./bin directory, the node_modules directory and the package-lock.json file.<br>
 - test: run the unit tests in ./test
 - pretty: prettify the code
+- git-hooks: install the git pre-commit hook to prettify and test the code before commit
 
 ## Installing and running
 Make sure npm is installed.<br>
