@@ -46,7 +46,3 @@ To disable CORS using file:///
 For Firefox:<br>
     Type about:config into the navigation bar, then set security.fileuri.strict_origin_policy = false
 
-For Chrome, use the command line option:<br>
-- Chrome.exe --disable-web-security  (Windows)<br>
-- chrome --disable-web-security (Linux)
-
