@@ -10,14 +10,14 @@ by pressing the 'Change Colour' button.
 
 This project uses npm and the following scripts are defined:<br>
 - deploy: deploy the app (uglifying it) to the ./bin directory<br>
-- clean: remove the uglified files from the ./bin directory, the node_modules directory and the package-lock.json file.<br>
+- clean: remove the uglified files from the ./bin directory, the node_modules directory and the package-lock.json file<br>
 - test: run the unit tests in ./test
 - pretty: prettify the code
 - git-hooks: install the git pre-commit hook to prettify and test the code before commit
 
 ## Installing and running
 Make sure npm is installed.<br>
-Run 'npm install' to install the required Node modules<br>
+Run 'npm install' to install the required Node.js modules<br>
 Run 'npm run deploy' to create the uglified files in ./bin<br>
 Point your browser at the bounce-balls.html file<br>
 You may need to disable CORS if using file:/// URLs. Notes on how to do this
@@ -27,23 +27,23 @@ Alternatively, the application can be run from the source directory without ugli
 it or running the unit tests by loading the bounce-balls-src.html file.
 
 ## Layout
-./bin: the directory where the uglified files are and where the demo may be run from.
+./bin: the directory where the uglified files are installed
 
-./src: the actual source code.<br>
+./src: the actual source code<br>
   - main.js - the main entry point from the browser<br>
-  - bounce-balls.js - the Ball class and physics models module
+  - bounce-balls.js - the Ball class, utilities and physics models module
 
 ./test: the unit test directory. This uses jest.
   - bounce-balls.test.js - the unit test file
 
 ./scripts: the git scripts directory.
-  - install-hooks - bash script to install the git pre-comit hook<br>
+  - install-hooks.sh - bash script to install the git pre-comit hook<br>
   - pre-commit.sh - the git pre-commit hook
 
 ## Unit tests
 The unit tests are not a comprehensive suite of tests. I have only implemented
 two tests, one to check state and the other to check mocked function calling.
-The tests are merly to show how they could be set up for a complete test suite.
+The tests are merely to show how they could be set up for a complete test suite.
 
 ## Disabling CORS
 To disable CORS using file:///
