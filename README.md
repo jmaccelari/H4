@@ -36,6 +36,10 @@ it or running the unit tests by loading the bounce-balls-src.html file.
 ./test: the unit test directory. This uses jest.
   - bounce-balls.test.js - the unit test file
 
+./scripts: the git scripts directory.
+  - install-hooks - bash script to install the git pre-comit hook<br>
+  - pre-commit.sh - the git pre-commit hook
+
 ## Unit tests
 The unit tests are not a comprehensive suite of tests. I have only implemented
 two tests, one to check state and the other to check mocked function calling.
