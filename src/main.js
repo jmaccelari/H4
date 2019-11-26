@@ -53,7 +53,6 @@ async function bounceBalls() {
     button.addEventListener(
         'mousedown',
         e => {
-            console.log(JSON.stringify(e))
             changeModel()
         },
         false
