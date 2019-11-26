@@ -16,7 +16,7 @@ class MockContext {
     fillRect(x, y, w, h) {}
 }
 
-// This test checks the constructor correclty constructs a ball
+// This test checks the constructor correctly constructs a ball
 test('test constructor', () => {
     // GIVEN the following parameters for the Ball constructor
     let x = 100

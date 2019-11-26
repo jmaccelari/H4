@@ -50,6 +50,7 @@ modelMap.set(Models.LINEAR, {
     initModel(ball) {
         ball.minY = ball.y
         ball.vy = Math.abs(ball.vy)
+        ball.vx = Math.abs(ball.vx)
     },
     reinitModel: function() {
         balls.forEach(ball => {
