@@ -23,8 +23,6 @@ test('test constructor', () => {
     let y = 50
     let cwidth = 300
     let cheight = 200
-    let eLoss = 50
-    let g = 1
 
     // WHEN we construct the ball
     let mockContext = new MockContext()
@@ -33,18 +31,17 @@ test('test constructor', () => {
     // THEN we expect the ball to be correctly constructed
     expect(ball.x).toBe(x)
     expect(ball.y).toBe(y)
+    expect(ball.context).not.toBeUndefined()
     expect(ball.cwidth).toBe(cwidth)
     expect(ball.cheight).toBe(cheight)
-    expect(ball.model).toBe(Models.GRAVITY)
+    expect(ball.model).toBe(Models.LINEAR)
     expect(ball.speed).toBeGreaterThan(0.0)
     expect(ball.angle).toBeGreaterThanOrEqual(0.0)
     expect(ball.angle).toBeLessThanOrEqual(2.0 * Math.PI)
     expect(ball.vx).not.toBeUndefined()
     expect(ball.vy).not.toBeUndefined()
     expect(ball.nextStep).not.toBeUndefined()
-    expect(ball.energyLossOnBounce).toBe(eLoss)
-    expect(ball.g).toBe(g)
-    expect(ball.energy).toBeGreaterThan(0.0)
+    expect(ball.minY).toBe(y)
 })
 
 // This test checks that the Ball.draw() method calls the context.fillRect()

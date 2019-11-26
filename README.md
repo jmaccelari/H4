@@ -6,7 +6,9 @@ A demo bouncing ball application.
 We have a chart in which the user can click and launch balls. Two models
 are implemented - linear and gravity - and the user can toggle between them
 by pressing the 'Change Model' button. The colour of the balls can be cycled
-by pressing the 'Change Colour' button.
+by pressing the 'Change Colour' button. The initial maximum speed of the balls
+can be changed by moving the 'Initial Maximum Speed' slider (right is faster,
+left is slower).
 
 This project uses npm and the following scripts are defined:<br>
 - deploy: deploy the app (uglifying it) to the ./bin directory<br>

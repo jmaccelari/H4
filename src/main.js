@@ -37,7 +37,8 @@ async function bounceBalls() {
         },
         false
     )
-    // Add an even to the 'Change Model' button so we can cycle through the defined models
+
+    // Add an event to the 'Change Colour' button so we can cycle through the defined models
     let button = document.getElementById('changeColourButton')
     button.addEventListener(
         'mousedown',
@@ -47,11 +48,24 @@ async function bounceBalls() {
         false
     )
 
+    // Add an event to the 'Change Model' button so we can cycle through the defined models
     button = document.getElementById('changeModelButton')
     button.addEventListener(
         'mousedown',
         e => {
+            console.log(JSON.stringify(e))
             changeModel()
+        },
+        false
+    )
+
+    // Add an event to speed slider control so we can control the maximum initial speed
+    let slider = document.getElementById('speedRange')
+    slider.value = Ball.initialSpeed
+    slider.addEventListener(
+        'change',
+        e => {
+            Ball.initialSpeed = e.srcElement.value
         },
         false
     )

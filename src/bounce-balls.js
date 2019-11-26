@@ -28,7 +28,7 @@ export let Models = {
     LINEAR: 0,
     GRAVITY: 1,
 }
-let model = Models.GRAVITY
+let model = Models.LINEAR
 let modelMap = new Map()
 modelMap.set(Models.LINEAR, {
     nextStep: function() {
@@ -156,7 +156,7 @@ export class Ball {
         this.cheight = height
         this.model = model
 
-        this.speed = Math.random() * 10.0 + 1.0
+        this.speed = Math.random() * Ball.initialSpeed + 1.0
         this.angle = Math.random() * 2.0 * Math.PI
         this.vx = this.speed * Math.cos(this.angle)
         this.vy = this.speed * Math.sin(this.angle)
@@ -174,5 +174,6 @@ export class Ball {
         this.nextStep()
     }
 }
+Ball.initialSpeed = 10
 
 export default { Ball, Models, balls, changeColour, changeModel }
